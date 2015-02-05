@@ -13,7 +13,6 @@ import javax.swing.JTextArea;
 import javax.swing.ButtonGroup;
 
 public class calculator {
-//test test test //remote test
 	private JFrame frame;
 	private JTextArea textField;
 	
