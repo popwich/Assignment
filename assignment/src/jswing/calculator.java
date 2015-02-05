@@ -4,10 +4,13 @@ import java.awt.EventQueue;
 
 import javax.swing.JFrame;
 import javax.swing.JButton;
+
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import java.util.Map;
-import org.apache.commons.lang.ArrayUtils;
+
+import org.apache.commons.lang3.ArrayUtils;
+
 import javax.swing.JRadioButton;
 import javax.swing.JTextArea;
 import javax.swing.ButtonGroup;
@@ -18,7 +21,7 @@ public class calculator {
 	
 	//create a dictionary to hold last operator user clicked
 	@SuppressWarnings("unchecked")
-	private Map<String, String> operatorDict = ArrayUtils.toMap(new String [][]{
+	private Map<Object, Object> operatorDict = ArrayUtils.toMap(new String [][]{
 			{"plus", "false"}, {"minus", "false"}, {"multiply", "false"}, {"divide", "false"} 
 			}
 	);
