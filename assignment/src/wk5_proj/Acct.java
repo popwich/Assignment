@@ -1,5 +1,7 @@
 ﻿package wk5_proj;
 
+import java.util.Enumeration;
+import java.util.Hashtable;
 import java.util.Set;
 
 import org.apache.commons.lang3.ObjectUtils;
@@ -11,6 +13,10 @@ import org.apache.commons.lang3.builder.ToStringStyle;
 public class Acct {
 	private int accountId;
 	private double balance;	
+	// Create a hash map
+    Hashtable<String, Double> balanceHash = new Hashtable<String, Double>();
+    Enumeration<String> userId;
+    
 	//private Set<Customer> balance;
 
 	//setter and getter

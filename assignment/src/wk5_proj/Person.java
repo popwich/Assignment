@@ -1,6 +1,5 @@
 ﻿package wk5_proj;
 
-
 public class Person implements Human {
 	private String name;
 	private String gender;

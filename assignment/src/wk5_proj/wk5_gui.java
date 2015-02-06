@@ -6,6 +6,7 @@ import javax.swing.JFrame;
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
+import javax.swing.JTextArea;
 
 public class wk5_gui {
 
@@ -13,6 +14,8 @@ public class wk5_gui {
 	private JTextField textField;
 	private JTextField textField_1;
 	private JLabel lblInitialBalance;
+	private JTextArea textArea;
+	private JButton btnViewAcct;
 
 	/**
 	 * Launch the application.
@@ -47,7 +50,7 @@ public class wk5_gui {
 		frame.getContentPane().setLayout(null);
 		
 		JButton btnAddCustomer = new JButton("Create Acct");
-		btnAddCustomer.setBounds(10, 111, 99, 23);
+		btnAddCustomer.setBounds(10, 77, 99, 23);
 		frame.getContentPane().add(btnAddCustomer);
 		
 		JLabel lblAcctNumber = new JLabel("Acct Number");
@@ -67,6 +70,14 @@ public class wk5_gui {
 		lblInitialBalance = new JLabel("Initial Balance");
 		lblInitialBalance.setBounds(10, 50, 74, 14);
 		frame.getContentPane().add(lblInitialBalance);
+		
+		textArea = new JTextArea();
+		textArea.setBounds(10, 178, 119, 73);
+		frame.getContentPane().add(textArea);
+		
+		btnViewAcct = new JButton("View customer");
+		btnViewAcct.setBounds(10, 145, 119, 23);
+		frame.getContentPane().add(btnViewAcct);
 	}
 
 }

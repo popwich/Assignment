@@ -8,12 +8,18 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 public class Customer extends Person {
-	private long customerId;
-
-	private Set<Acct> companies;
-
-
-	@Override
+	private Acct bankAccount;
+	private Person person;
+	
+	//getter and setter	
+	public String getName(Person person) {
+		return person.getName();
+	}
+	public void settName(Person person, String value) {
+		 person.setName(value);
+	}
+	
+/*	@Override
 	public boolean equals(Object obj) {
 		if (this == obj) {
 			return true;
@@ -29,15 +35,6 @@ public class Customer extends Person {
 	}
 
 
-	public Set<Acct> getCompanies() {
-		return this.companies;
-	}
-
-	public long getCustomerId() {
-		return this.customerId;
-	}
-
-
 	@Override
 	public int hashCode() {
 		final HashCodeBuilder builder = new HashCodeBuilder();
@@ -45,16 +42,6 @@ public class Customer extends Person {
 		builder.append(customerId);
 		return builder.toHashCode();
 	}
-
-	public void setCompanies(Set<Acct> companiess) {
-		this.companies = companiess;
-	}
-
-	public void setCustomerId(long value) {
-		this.customerId = value;
-	}
-
-
 
 	@Override
 	public String toString() {
@@ -64,4 +51,6 @@ public class Customer extends Person {
 		builder.append(customerId);
 		return builder.toString();
 	}
+*/
+	
 }
