@@ -1,4 +1,4 @@
-package helloworld;
+package wk5_proj;
 
 import java.util.*;
 
