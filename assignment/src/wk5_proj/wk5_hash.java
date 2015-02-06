@@ -6,7 +6,7 @@ public class wk5_hash {
 
    public static void main(String args[]) {
       // Create a hash map
-/*      Hashtable<String, Double> balance = new Hashtable<String, Double>();
+     Hashtable<String, Double> balance = new Hashtable<String, Double>();
       Enumeration<String> names;
       String str;
       double bal;
@@ -29,16 +29,7 @@ public class wk5_hash {
       bal = ((Double)balance.get("Zara")).doubleValue();
       balance.put("Zara", new Double(bal+1000));
       System.out.println("Zara's new balance: " +
-      balance.get("Zara"));*/
-	  
-	  Acct a1 = new Acct();
-	  a1.setAccountId(1234);
-	  a1.setBalance(100);
-	   
-	  Customer c1 = new Customer();
-	  c1.setName("jeff");
-	  c1.setAge(21);
-	  
+      balance.get("Zara"));
 	   
 	 
    }
