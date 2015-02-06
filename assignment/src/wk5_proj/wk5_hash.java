@@ -30,8 +30,16 @@ public class wk5_hash {
       balance.put("Zara", new Double(bal+1000));
       System.out.println("Zara's new balance: " +
       balance.get("Zara"));*/
+	  
+	  Acct a1 = new Acct();
+	  a1.setAccountId(1234);
+	  a1.setBalance(100);
 	   
-	   System.out.println("Zara's new balance: ");
+	  Customer c1 = new Customer();
+	  c1.setName("jeff");
+	  c1.setAge(21);
+	  
 	   
+	 
    }
 }

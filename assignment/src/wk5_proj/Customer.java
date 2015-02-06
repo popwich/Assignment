@@ -9,14 +9,15 @@ import org.apache.commons.lang3.builder.ToStringStyle;
 
 public class Customer extends Person {
 	private Acct bankAccount;
-	private Person person;
+	//private Person person;
 	
-	//getter and setter	
-	public String getName(Person person) {
-		return person.getName();
+	public void setBankAccount(Acct bankAccount){
+		
 	}
-	public void settName(Person person, String value) {
-		 person.setName(value);
+
+	public <set>Acct getBankAccount(){
+		return bankAccount;
+		
 	}
 	
 /*	@Override

@@ -13,6 +13,7 @@ import org.apache.commons.lang3.builder.ToStringStyle;
 public class Acct {
 	private int accountId;
 	private double balance;	
+	
 	// Create a hash map
     Hashtable<String, Double> balanceHash = new Hashtable<String, Double>();
     Enumeration<String> userId;

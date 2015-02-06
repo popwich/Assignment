@@ -1,10 +1,15 @@
 ﻿package wk5_proj;
+import java.util.*;
 
 public class Person implements Human {
 	private String name;
 	private String gender;
-	private Address address;
+	private String address;
 	private int age;
+	
+	public Person() {
+		// TODO Auto-generated constructor stub
+	}
 	
 	//setter and getter
 	public void setName(String value) {
@@ -21,10 +26,10 @@ public class Person implements Human {
 		return this.gender;
 	}
 	
-	public void setAddress(Address address) {
+	public void setAddress(String address) {
 		this.address = address;
 	}
-	public Address getAddress() {
+	public String getAddress() {
 		return this.address;
 	}
 
@@ -34,12 +39,4 @@ public class Person implements Human {
 	public int getAge() {
 		return this.age;
 	}
-
-	
-
-
-	
-
-
-
 }

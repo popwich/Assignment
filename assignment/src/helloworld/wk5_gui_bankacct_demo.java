@@ -9,7 +9,7 @@ import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
 
-class wk5_gui_bankacct extends Frame implements ActionListener
+class wk5_gui_bankacct_demo extends Frame implements ActionListener
 {
         /**
 	 * 
@@ -22,7 +22,7 @@ class wk5_gui_bankacct extends Frame implements ActionListener
         Button but=new Button("Create Account");
         Button but1=new Button("Test Account");
         BankAccount b;
-        wk5_gui_bankacct()
+        wk5_gui_bankacct_demo()
         {
                 addWindowListener(new NewWindowAdapter());
                 setLayout(new GridLayout(2,0));
@@ -95,7 +95,7 @@ class wk5_gui_bankacct extends Frame implements ActionListener
         }
         public static void main(String arg[])
         {
-                wk5_gui_bankacct at=new wk5_gui_bankacct();
+                wk5_gui_bankacct_demo at=new wk5_gui_bankacct_demo();
                 at.setTitle("Bank Account Tester");
                 at.setSize(600,200);
                 at.setVisible(true);
