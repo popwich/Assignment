@@ -1,8 +1,5 @@
 ﻿package wk5_proj;
 
-import javax.persistence.Embeddable;
-
-@Embeddable
 public class Address {
 	private String name;
 

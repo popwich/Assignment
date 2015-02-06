@@ -2,24 +2,15 @@
 
 import java.util.Set;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.ManyToMany;
-import javax.persistence.Table;
-import javax.persistence.UniqueConstraint;
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
-import org.apache.commons.lang.builder.EqualsBuilder;
-import org.apache.commons.lang.builder.HashCodeBuilder;
-import org.apache.commons.lang.builder.ToStringBuilder;
-import org.apache.commons.lang.builder.ToStringStyle;
-
-@Entity
-@Table(uniqueConstraints = { @UniqueConstraint(columnNames = { "CUST_ID" }) })
 public class Customer extends Person {
 	private long customerId;
 
-	private Set<Company> companies;
+	private Set<Acct> companies;
 
 
 	@Override
@@ -37,13 +28,11 @@ public class Customer extends Person {
 		return builder.isEquals();
 	}
 
-	@ManyToMany(mappedBy = "customers")
-	public Set<Company> getCompanies() {
+
+	public Set<Acct> getCompanies() {
 		return this.companies;
 	}
 
-	@Column(name = "CUST_ID")
-	@Id
 	public long getCustomerId() {
 		return this.customerId;
 	}
@@ -57,7 +46,7 @@ public class Customer extends Person {
 		return builder.toHashCode();
 	}
 
-	public void setCompanies(Set<Company> companiess) {
+	public void setCompanies(Set<Acct> companiess) {
 		this.companies = companiess;
 	}
 

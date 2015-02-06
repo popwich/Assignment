@@ -1,52 +1,46 @@
 ﻿package wk5_proj;
 
-import javax.persistence.AttributeOverride;
-import javax.persistence.Column;
-import javax.persistence.Embedded;
-import javax.persistence.MappedSuperclass;
 
-@MappedSuperclass
 public class Person implements Human {
-	private Address address;
-
 	private String name;
-
-	private int age;
-
 	private String gender;
-
-	@Embedded
-	@AttributeOverride(name = "name", column = @Column(name = "ADDR_NAME"))
-	public Address getAddress() {
-		return this.address;
+	private Address address;
+	private int age;
+	
+	//setter and getter
+	public void setName(String value) {
+		this.name = value;
 	}
-
-	public int getAge() {
-		return this.age;
+	public String getName() {
+		return this.name;
+	}	
+	
+	public void setGender(String value) {
+		this.gender = value;
 	}
-
 	public String getGender() {
 		return this.gender;
 	}
-
-	public String getName() {
-		return this.name;
-	}
-
+	
 	public void setAddress(Address address) {
 		this.address = address;
+	}
+	public Address getAddress() {
+		return this.address;
 	}
 
 	public void setAge(int value) {
 		this.age = value;
 	}
-
-	public void setGender(String value) {
-		this.gender = value;
+	public int getAge() {
+		return this.age;
 	}
 
-	public void setName(String value) {
-		this.name = value;
-	}
+	
+
+
+	
+
+
 
 }

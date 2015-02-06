@@ -1,8 +1,5 @@
 ﻿package wk5_proj;
 
-import javax.persistence.Entity;
-
-@Entity
 public interface Human {
 	public int getAge();
 
