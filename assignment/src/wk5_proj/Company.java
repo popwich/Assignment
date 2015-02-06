@@ -15,12 +15,9 @@ import org.apache.commons.lang.builder.ToStringStyle;
 @Entity
 public class Company {
 
-	private Set<Employee> employees;
-
 	private String companyName;
 
 	private Set<Customer> customers;
-
 
 	private Address address;
 
@@ -49,11 +46,6 @@ public class Company {
 		return this.customers;
 	}
 
-	@OneToMany(mappedBy = "employer")
-	public Set<Employee> getEmployees() {
-		return this.employees;
-	}
-
 
 	@Override
 	public int hashCode() {
@@ -74,11 +66,6 @@ public class Company {
 	public void setCustomers(Set<Customer> customerss) {
 		this.customers = customerss;
 	}
-
-	public void setEmployees(Set<Employee> employeess) {
-		this.employees = employeess;
-	}
-
 
 
 	@Override
