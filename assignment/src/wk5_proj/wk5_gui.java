@@ -22,6 +22,7 @@ public class wk5_gui {
 	private JTextField textField_3;
 	private JTextField textField_4;
 	private JTextField textField_5;
+	private JTextArea textArea_1;
 
 	/**
 	 * Launch the application.
@@ -51,16 +52,33 @@ public class wk5_gui {
 	 */
 	private void initialize() {
 		frame = new JFrame();
-		frame.setBounds(100, 100, 450, 300);
+		frame.setBounds(100, 100, 450, 447);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 		
 		JButton btnAddCustomer = new JButton("Create Acct");
-		btnAddCustomer.setBounds(165, 77, 99, 23);
+		btnAddCustomer.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				//retrieve acct data from input box
+				String acctId = textField_4.getText();	
+				double initBalance = Double.parseDouble(textField_5.getText());
+				
+				//new Acct object
+				Acct acct1 = new Acct();
+				acct1.setAccountId(acctId);
+				acct1.setBalance(initBalance);
+				
+				//display customer in textAre_1
+				textArea_1.append("New acct created: \n");
+				textArea_1.append("AccountId: " + acct1.getAccountId() + "\n");
+				textArea_1.append("Account Balancer: " + acct1.getBalance() + "\n");				
+			}
+		});
+		btnAddCustomer.setBounds(221, 73, 99, 23);
 		frame.getContentPane().add(btnAddCustomer);
 		
 		JLabel lblAcctNumber = new JLabel("Acct Number");
-		lblAcctNumber.setBounds(155, 22, 74, 14);
+		lblAcctNumber.setBounds(221, 19, 74, 14);
 		frame.getContentPane().add(lblAcctNumber);
 		
 		textField = new JTextField();
@@ -74,11 +92,11 @@ public class wk5_gui {
 		textField_1.setColumns(10);
 		
 		lblInitialBalance = new JLabel("Initial Balance");
-		lblInitialBalance.setBounds(155, 49, 74, 14);
+		lblInitialBalance.setBounds(221, 48, 74, 14);
 		frame.getContentPane().add(lblInitialBalance);
 		
 		textArea = new JTextArea();
-		textArea.setBounds(10, 178, 141, 73);
+		textArea.setBounds(10, 178, 143, 220);
 		frame.getContentPane().add(textArea);
 		
 		JLabel lblName = new JLabel("Name");
@@ -105,12 +123,13 @@ public class wk5_gui {
 		
 		textField_4 = new JTextField();
 		textField_4.setColumns(10);
-		textField_4.setBounds(230, 19, 86, 20);
+		textField_4.setBounds(305, 19, 86, 20);
 		frame.getContentPane().add(textField_4);
 		
 		JButton btnCreateCustomer = new JButton("Create Customer");
 		btnCreateCustomer.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				//retrieve customer data input
 				String name = textField.getText();	
 				String gender = textField_1.getText();
 				int age = Integer.parseInt(textField_2.getText());
@@ -118,7 +137,8 @@ public class wk5_gui {
 				Customer c1 = new Customer();
 				c1.setName(name); c1.setGender(gender); c1.setAge(age); c1.setAddress(address); 
 				
-				//display customer in textArea				
+				//display customer in textArea		
+				textArea.append("New customer created: \n");
 				textArea.append("name: " + c1.getName() + "\n");
 				textArea.append("gender: " + c1.getGender() + "\n");
 				textArea.append("age: " + c1.getAge() + "\n");
@@ -134,7 +154,11 @@ public class wk5_gui {
 		
 		textField_5 = new JTextField();
 		textField_5.setColumns(10);
-		textField_5.setBounds(230, 46, 86, 20);
+		textField_5.setBounds(305, 46, 86, 20);
 		frame.getContentPane().add(textField_5);
+		
+		textArea_1 = new JTextArea();
+		textArea_1.setBounds(216, 109, 143, 75);
+		frame.getContentPane().add(textArea_1);
 	}
 }

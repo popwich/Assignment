@@ -11,7 +11,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 public class Acct {
-	private int accountId;
+	private String accountId;
 	private double balance;	
 	
 	// Create a hash map
@@ -21,11 +21,11 @@ public class Acct {
 	//private Set<Customer> balance;
 
 	//setter and getter
-	public void setAccountId(int value) {
+	public void setAccountId(String value) {
 		this.accountId = value;
 	}
 	
-	public int getAccountId() {
+	public String getAccountId() {
 		return this.accountId;
 	}
 	
