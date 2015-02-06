@@ -78,7 +78,7 @@ public class wk5_gui {
 		frame.getContentPane().add(lblInitialBalance);
 		
 		textArea = new JTextArea();
-		textArea.setBounds(10, 178, 119, 73);
+		textArea.setBounds(10, 178, 141, 73);
 		frame.getContentPane().add(textArea);
 		
 		JLabel lblName = new JLabel("Name");
@@ -117,6 +117,12 @@ public class wk5_gui {
 				String address = textField_3.getText();				
 				Customer c1 = new Customer();
 				c1.setName(name); c1.setGender(gender); c1.setAge(age); c1.setAddress(address); 
+				
+				//display customer in textArea				
+				textArea.append("name: " + c1.getName() + "\n");
+				textArea.append("gender: " + c1.getGender() + "\n");
+				textArea.append("age: " + c1.getAge() + "\n");
+				textArea.append("address: " + c1.getAddress() + "\n");
 			}
 		});
 		btnCreateCustomer.setBounds(5, 144, 124, 23);
