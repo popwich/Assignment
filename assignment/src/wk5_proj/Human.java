@@ -1,4 +1,4 @@
-﻿package wk5_proj;
+package wk5_proj;
 
 public interface Human {
 	public int getAge();

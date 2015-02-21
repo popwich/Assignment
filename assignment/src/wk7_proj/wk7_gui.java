@@ -1,4 +1,4 @@
-package wk5_proj;
+package wk7_proj;
 
 import java.awt.EventQueue;
 
@@ -13,7 +13,7 @@ import java.awt.event.ActionEvent;
 
 import javax.swing.SwingConstants;
 
-public class wk5_gui {
+public class wk7_gui {
 
 	private JFrame frame;
 	private JTextField textField;
@@ -33,7 +33,7 @@ public class wk5_gui {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					wk5_gui window = new wk5_gui();
+					wk7_gui window = new wk7_gui();
 					window.frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -45,7 +45,7 @@ public class wk5_gui {
 	/**
 	 * Create the application.
 	 */
-	public wk5_gui() {
+	public wk7_gui() {
 		initialize();
 	}
 

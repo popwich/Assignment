@@ -1,4 +1,4 @@
-﻿package wk5_proj;
+package wk5_proj;
 
 import java.util.Enumeration;
 import java.util.Hashtable;
