@@ -1,4 +1,6 @@
-package wk7_lee_proj;import java.awt.Graphics;
+package wk7_proj_d1;
+
+import java.awt.Graphics;
 import java.util.*;
 /*
  * The PolyLine class model a line consisting of many points

@@ -1,4 +1,6 @@
-package wk7_lee_proj;
+package wk7_proj_d1;
+
+
 import java.awt.EventQueue;
 import java.awt.Graphics;
 import java.util.List;
