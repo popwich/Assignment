@@ -35,8 +35,7 @@ import javax.swing.LayoutStyle.ComponentPlacement;
 
 public class draw {
 
-	private JFrame frm_drawing;
-	private canvasArea canvas;   
+	private JFrame frm_drawing;  
 	private canvasArea canvas_1;
 
 
@@ -80,12 +79,14 @@ public class draw {
 		Button lineButton = new Button("Line");
 		lineButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				canvas_1.drawLine(); //call drawLine method in canvasArea class to draw line instead of default polyline		
 			}
 		});
 		
 		Button ovalButton = new Button("Oval");
 		ovalButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				canvas_1.drawOval(); //call drawOval method in canvasArea class to draw line instead of default polyline		
 			}
 		});
 		
@@ -104,6 +105,7 @@ public class draw {
 		});
 		setColourYellow_Button.setBackground(Color.YELLOW);
 		
+		//create canvasArea instance canvas_1
 		canvas_1 = new canvasArea();
 		canvas_1.setForeground(Color.WHITE);
 		canvas_1.setBackground(Color.WHITE);
