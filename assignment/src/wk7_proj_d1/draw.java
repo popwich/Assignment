@@ -1,5 +1,12 @@
 package wk7_proj_d1;
 
+/*
+* Code by Lee Qing Shen (24 Feb 2015)
+* Reference: 
+* 1. Tutorial of using graphic2d obj: https://www3.ntu.edu.sg/home/ehchua/programming/java/J4b_CustomGraphics.html
+* 2. Tutorial of jswing paint: http://www.ssaurel.com/blog/learn-how-to-make-a-swing-painting-and-drawing-application/
+*/
+
 import java.awt.EventQueue;
 import java.util.List;
 
@@ -37,8 +44,6 @@ public class draw {
 
 	private JFrame frm_drawing;  
 	private canvasArea canvas_1;
-
-
 	
 	/**
 	 * Launch the application.
@@ -79,14 +84,14 @@ public class draw {
 		Button lineButton = new Button("Line");
 		lineButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				canvas_1.drawLine(); //call drawLine method in canvasArea class to draw line instead of default polyline		
+				canvas_1.drawLine(); //call drawLine method in canvasArea class to draw line 	
 			}
 		});
 		
-		Button ovalButton = new Button("Oval");
-		ovalButton.addActionListener(new ActionListener() {
+		Button rectButton = new Button("rect");
+		rectButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				canvas_1.drawOval(); //call drawOval method in canvasArea class to draw line instead of default polyline		
+				canvas_1.drawRect(); //call drawRect method in canvasArea class to draw rect		
 			}
 		});
 		
@@ -131,7 +136,7 @@ public class draw {
 							.addGap(10)
 							.addComponent(lineButton, GroupLayout.PREFERRED_SIZE, 85, GroupLayout.PREFERRED_SIZE)
 							.addGap(6)
-							.addComponent(ovalButton, GroupLayout.PREFERRED_SIZE, 85, GroupLayout.PREFERRED_SIZE)
+							.addComponent(rectButton, GroupLayout.PREFERRED_SIZE, 85, GroupLayout.PREFERRED_SIZE)
 							.addGap(214)
 							.addComponent(setColourRed_Button, GroupLayout.PREFERRED_SIZE, 53, GroupLayout.PREFERRED_SIZE)
 							.addGap(6)
@@ -149,7 +154,7 @@ public class draw {
 					.addGap(25)
 					.addGroup(groupLayout.createParallelGroup(Alignment.LEADING)
 						.addComponent(lineButton, GroupLayout.PREFERRED_SIZE, 41, GroupLayout.PREFERRED_SIZE)
-						.addComponent(ovalButton, GroupLayout.PREFERRED_SIZE, 41, GroupLayout.PREFERRED_SIZE)
+						.addComponent(rectButton, GroupLayout.PREFERRED_SIZE, 41, GroupLayout.PREFERRED_SIZE)
 						.addComponent(setColourRed_Button, GroupLayout.PREFERRED_SIZE, 41, GroupLayout.PREFERRED_SIZE)
 						.addComponent(setColourYellow_Button, GroupLayout.PREFERRED_SIZE, 41, GroupLayout.PREFERRED_SIZE))
 					.addGap(36)

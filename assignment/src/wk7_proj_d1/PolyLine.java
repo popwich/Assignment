@@ -5,7 +5,7 @@ import java.util.*;
 /*
  * The PolyLine class model a line consisting of many points
  */
-public class PolyLine {
+public class PolyLine extends Shape {
    private List<Integer> xList;  // List of x-coord
    private List<Integer> yList;  // List of y-coord
  
