@@ -88,10 +88,17 @@ public class draw {
 			}
 		});
 		
-		Button rectButton = new Button("rect");
+		Button rectButton = new Button("Rectangle");
 		rectButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				canvas_1.drawRect(); //call drawRect method in canvasArea class to draw rect		
+			}
+		});
+		
+		Button ovalButton = new Button("Oval");
+		ovalButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				canvas_1.drawOval(); //call drawOval method in canvasArea class to draw oval		
 			}
 		});
 		
@@ -137,7 +144,9 @@ public class draw {
 							.addComponent(lineButton, GroupLayout.PREFERRED_SIZE, 85, GroupLayout.PREFERRED_SIZE)
 							.addGap(6)
 							.addComponent(rectButton, GroupLayout.PREFERRED_SIZE, 85, GroupLayout.PREFERRED_SIZE)
-							.addGap(214)
+							.addGap(6)
+							.addComponent(ovalButton, GroupLayout.PREFERRED_SIZE, 85, GroupLayout.PREFERRED_SIZE)
+							.addGap(208)
 							.addComponent(setColourRed_Button, GroupLayout.PREFERRED_SIZE, 53, GroupLayout.PREFERRED_SIZE)
 							.addGap(6)
 							.addComponent(setColourYellow_Button, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)))
@@ -155,6 +164,7 @@ public class draw {
 					.addGroup(groupLayout.createParallelGroup(Alignment.LEADING)
 						.addComponent(lineButton, GroupLayout.PREFERRED_SIZE, 41, GroupLayout.PREFERRED_SIZE)
 						.addComponent(rectButton, GroupLayout.PREFERRED_SIZE, 41, GroupLayout.PREFERRED_SIZE)
+						.addComponent(ovalButton, GroupLayout.PREFERRED_SIZE, 41, GroupLayout.PREFERRED_SIZE)
 						.addComponent(setColourRed_Button, GroupLayout.PREFERRED_SIZE, 41, GroupLayout.PREFERRED_SIZE)
 						.addComponent(setColourYellow_Button, GroupLayout.PREFERRED_SIZE, 41, GroupLayout.PREFERRED_SIZE))
 					.addGap(36)

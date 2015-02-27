@@ -21,11 +21,6 @@ import java.awt.Canvas;
 import java.awt.Color;
 
 import javax.swing.JRadioButton;
-
-
-
-
-
 import java.awt.Button;
 import java.util.ArrayList;
 import java.awt.event.MouseAdapter;
@@ -37,15 +32,15 @@ public class canvasArea extends JPanel {
 	private List<PolyLine> lines = new ArrayList<PolyLine>();
 	private PolyLine currentLine; 
 	private RectShape currentRect;
+	private OvalShape currentOval;
 	int startX, startY, endX, endY,	width, height;
 	String flag;
 	
-	//default constructor - draw polyline
+	//default constructor - draw rectangle
 	public canvasArea() {
 		addMouseMotionListener(new MouseMotionAdapter() {
 			@Override
 			public void mouseDragged(MouseEvent e) {
-				//currentLine.addPoint(e.getX(),  e.getY());
 				currentRect.width = Math.abs(e.getX() - currentRect.left);
 				currentRect.height = Math.abs(e.getY() - currentRect.top);
 				repaint();
@@ -57,9 +52,6 @@ public class canvasArea extends JPanel {
 			public void mousePressed(MouseEvent e) {
 				flag = "rect";
 				currentRect = new RectShape();
-				//currentLine = new PolyLine();
-				//lines.add(currentLine);
-				//currentLine.addPoint(e.getX(), e.getY());
 				currentRect.left = e.getX();
 				currentRect.top = e.getY();		
 			}
@@ -92,8 +84,7 @@ public class canvasArea extends JPanel {
 			case "rect": 
 				addMouseMotionListener(new MouseMotionAdapter() {
 					@Override
-					public void mouseDragged(MouseEvent e) {
-						//currentLine.addPoint(e.getX(),  e.getY());
+					public void mouseDragged(MouseEvent e) {	
 						currentRect.width = Math.abs(e.getX() - currentRect.left);
 						currentRect.height = Math.abs(e.getY() - currentRect.top);
 						repaint();
@@ -105,11 +96,29 @@ public class canvasArea extends JPanel {
 					public void mousePressed(MouseEvent e) {
 					flag = "rect";
 					currentRect = new RectShape();
-					//currentLine = new PolyLine();
-					//lines.add(currentLine);
-					//currentLine.addPoint(e.getX(), e.getY());
 					currentRect.left = e.getX();
 					currentRect.top = e.getY();
+					}
+				});
+				break;
+				
+			case "oval": 
+				addMouseMotionListener(new MouseMotionAdapter() {
+					@Override
+					public void mouseDragged(MouseEvent e) {
+						currentOval.width = Math.abs(e.getX() - currentOval.left);
+						currentOval.height = Math.abs(e.getY() - currentOval.top);
+						repaint();
+					}
+				});
+				
+				addMouseListener(new MouseAdapter() {
+					@Override
+					public void mousePressed(MouseEvent e) {
+					flag = "oval";
+					currentOval = new OvalShape();
+					currentOval.left = e.getX();
+					currentOval.top = e.getY();
 					}
 				});
 				break;
@@ -125,6 +134,9 @@ public class canvasArea extends JPanel {
       switch (flag) {
 	      case "rect":
 	    	  currentRect.draw(g);      
+	    	  break;
+	      case "oval":
+	    	  currentOval.draw(g);      
 	    	  break;
 	      case "line":
 	    	   for (PolyLine line: lines) {
@@ -142,5 +154,10 @@ public class canvasArea extends JPanel {
 	public void drawRect() {
 		// TODO Auto-generated method stub
 		canvasArea_method("rect");
+	}
+	
+	public void drawOval() {
+		// TODO Auto-generated method stub
+		canvasArea_method("oval");
 	}
 }
